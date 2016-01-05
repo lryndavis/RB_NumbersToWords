@@ -5,8 +5,45 @@ class Fixnum
   define_method(:numbers_to_words) do
     if (self <= 19 && self >= 0)
       return less_than_20.fetch(self)
-    # if (self >= 20 && self < 100)
-
+    elsif (self % 10 == 0)
+      return more_than_20.fetch(self)
     end
   end
 end
+
+#     # elsif (self >= 20 && self < 100)
+#     #
+#     #   return tens.fetch(self)
+# #     elsif self % 10 == 0
+# #       tens = more_than_20.fetch(self)
+# #       return tens
+# #     end
+# #
+# #
+# #     elsif self % 10 != 0
+# #       remainder = self % 10
+# #       return tens + less_than_20.fetch(remainder)
+# #   end
+# #   end
+# # end
+#
+#
+# define_method(:tens_numbers) do |tens|
+#   remainder = more_than_20 % 10
+#     if remainder == 0
+#       return tens.fetch(remainder) + less_than_20.fetch(self)
+#     end
+#   end
+# end
+#
+# #
+# #
+# # elsif self % 10 == 0
+# #   tens = more_than_20.fetch(self)
+# #   return tens
+# # end
+# # elsif self % 10 != 0
+# #   remainder = self % 10
+# #   return tens + less_than_20.fetch(remainder)
+# # end
+# #
