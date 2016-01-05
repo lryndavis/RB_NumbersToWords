@@ -9,4 +9,7 @@ describe('Fixnum#numbers_to_words') do
   it("returns 'eleven' when 11 is input") do
     expect(11.numbers_to_words()).to(eq("eleven"))
   end
-end
+  it("returns 'twenty one' when 21 is input") do
+    expect(21.numbers_to_words()).to(eq("twenty one"))
+  end
+end 
